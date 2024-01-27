@@ -1,0 +1,8 @@
+{
+  "name": "bersival_tech",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/Bersival/bersival_tech.git",
+  "author": "Bersival <bersivalit@gmail.com>",
+  "license": "MIT"
+}
