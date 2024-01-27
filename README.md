@@ -20,7 +20,10 @@ yarn build
 Stack:
 - NextJS 14.1.0
 - ReactJS ^18
+- TypeScript ^5
 - SCSS/SASS ^1.70.0
+- Tailwild ^3.3.0
+- Eslint ^8
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
