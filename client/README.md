@@ -1,8 +1,4 @@
-## bersival_tech
-Site portfolio with useful info about me
-
-
-This is a Next.js project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 
 ## Project info
@@ -18,8 +14,8 @@ yarn build
 ```
 
 Stack:
-- NextJS 14.1.0
-- ReactJS ^18
+- Next 14.1.0
+- React ^18
 - SCSS/SASS ^1.70.0
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
