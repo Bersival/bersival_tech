@@ -10,10 +10,12 @@
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.1.0",
+    "@types/react-lottie": "^1.2.10",
     "add": "^2.0.6",
     "next": "14.1.0",
     "react": "^18",
     "react-dom": "^18",
+    "react-lottie": "^1.2.4",
     "react-redux": "^9.1.0",
     "redux-logger": "^3.0.6",
     "sass": "^1.70.0",
