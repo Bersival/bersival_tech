@@ -9,7 +9,7 @@ import styles from './style.module.scss'
 
 import {NavBar} from '@/components/NavBar'
 import AboutLayout from '../AboutLayout'
-import StackLayout from '../StackBlock'
+import StackLayout from '../StackLayout'
 
 export default function HomePageLayout() {
   const dispatch = useAppDispatch()
