@@ -1,12 +1,17 @@
 'use client'
 
-import Image from 'next/image'
+import {H1} from '@/ui/typography/H1'
+import {H2} from '@/ui/typography/H2'
 
-import '@/styles/globals.scss'
 import {useAppDispatch} from '@/hooks/redux'
 import {useAppSelector} from '@/hooks/redux'
 import {testSlice} from '@/store/reducers/TestSlice'
-import {memo} from 'react'
+
+import '@/styles/globals.scss'
+import {Button} from '@/ui/Button'
+import {NavBar} from '@/components/NavBar'
+import WakatimeIcon from '@/sources/icons/Wakatime'
+import HomePageLayout from '@/layouts/HomepageLayout'
 
 export default function Home() {
   const dispatch = useAppDispatch()
@@ -17,20 +22,5 @@ export default function Home() {
     dispatch(increment())
   }
 
-  return (
-    <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-      <h1 className='text-white opacity-50 select-none text-4xl'>
-        git status <br />
-        git add -A <br />
-        git commit -am <br />
-        git checkout master <br />
-        git checkout -B bersival
-      </h1>
-      <button
-        onClick={() => handleBtnClick()}
-        className='text-white bg-cyan-500'>
-        Click on me {test.count}
-      </button>
-    </main>
-  )
+  return <HomePageLayout />
 }
