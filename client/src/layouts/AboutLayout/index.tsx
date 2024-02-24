@@ -40,7 +40,7 @@ export default function AboutLayout() {
         <div className={`${styles.nameHeadlineBlock}`}>
           <H1 className={`${styles.nameHeadline} text-white`}>Boris Ovchinnikov</H1>
           <Paragraph className='text-white mb-6'>
-            Hi! My name is Boris. I'm a Front-End Developer in Russia, Ekaterinburg. <br />I have serious passion for
+            Hi! My name is Boris. I am a Front-End Developer in Russia, Ekaterinburg. <br />I have serious passion for
             pure code, UI effects, animations and creating intuitive, dynamic user experiences.
           </Paragraph>
           <ul className='flex'>
