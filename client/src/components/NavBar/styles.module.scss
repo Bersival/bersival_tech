@@ -1,0 +1,83 @@
+@import '../../styles/consts.scss';
+
+.NavBarWrapper {
+  width: 100%;
+  position: fixed;
+  top: 80px;
+  display: flex;
+  align-items: center;
+  z-index: 10000;
+  justify-content: center;
+  .NavBar {
+    border: 2px solid white;
+    padding: 6px 0;
+    padding-left: 6px;
+    position: relative;
+    border-radius: 9000px;
+    ul {
+      display: flex;
+      li {
+        color: white;
+        padding: 16px;
+        user-select: none;
+        font-size: 20px;
+        cursor: pointer;
+        border-radius: 9000px;
+        line-height: 23px;
+        &:not(:last-child) {
+          margin-right: 16px;
+        }
+      }
+      li.active {
+        // background-image: url('../../../public/gradients/buttonBG.png');
+        // background-size: cover;
+        // background-size: 100% 100%;
+        color: #0f0f0f;
+      }
+      :not(.active):hover {
+        transition: all $reg-transition;
+        background-image: url('../../../public/gradients/buttonBG.png');
+        background-size: 100% 100%;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        // background: rgb(226, 167, 232);
+        // background: linear-gradient(18deg, rgba(226, 167, 232, 1) 22%, rgba(151, 206, 235, 1) 62%);
+      }
+    }
+  }
+}
+
+.indicator {
+  position: absolute;
+  width: 122px;
+  transition: transform 1s;
+  height: 55px;
+  border-radius: 99999px;
+  z-index: -1;
+  background-image: url('../../../public/gradients/buttonBG.png');
+  background-size: cover;
+  background-size: 100% 100%;
+  color: #0f0f0f;
+}
+
+// li:nth-child(1).active ~ .indicator {
+// }
+
+li:nth-child(2).active ~ .indicator {
+  width: 95px;
+  height: 55px;
+  transform: translateX(127px);
+}
+
+li:nth-child(3).active ~ .indicator {
+  width: 122px;
+  height: 55px;
+  transform: translateX(225px);
+}
+
+li:nth-child(4).active ~ .indicator {
+  width: 95px;
+  height: 55px;
+  transform: translateX(350px);
+}
