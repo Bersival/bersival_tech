@@ -10,8 +10,9 @@ import {H2} from '@/ui/typography/H2'
 import {Button} from '@/ui/Button'
 import {Paragraph} from '@/ui/typography/Paragraph'
 import StackIcon from '@/sources/icons/Stack'
-import Lottie, {LottieProps} from 'react-lottie'
-import animationData from './lottieOptions.json'
+import Lottie from 'react-lottie'
+// import animationData from './lottieOptions.json'
+import animationData from './lotttieOptions2.json'
 import {useState} from 'react'
 
 const defaultOptions = {
@@ -23,36 +24,37 @@ const defaultOptions = {
   },
 }
 
-const frontendStack = [
-  'TypeScript',
-  'Next.js',
-  'React.js',
-  'Redux',
-  'Node.js',
-  'JavaScript',
-  'Git',
-  'SASS/SCSS',
-  'npm / yarn',
-  'AntDesign',
-  'MaterialUI',
-  'Axios',
-  'SocketIO',
-]
-
-const backendStack = [
-  'Python',
-  'Flask',
-  'Flask_socketio',
-  'SQL',
-  'Postgresql',
-  'SQLAlchemy',
-  'WSGI',
-  'gunicorn',
-  'Redis',
-  'Flask_WFT',
-  'Eventlet / Gevent',
-  'Nginx',
-]
+const stack = {
+  frontendStack: [
+    'TypeScript',
+    'Next.js',
+    'React.js',
+    'Redux',
+    'Node.js',
+    'JavaScript',
+    'Git',
+    'npm / yarn',
+    'SASS/SCSS',
+    'AntDesign',
+    'MaterialUI',
+    'Axios',
+    'SocketIO',
+  ],
+  backendStack: [
+    'Python',
+    'Flask',
+    'Flask_socketio',
+    'SQL',
+    'Postgresql',
+    'SQLAlchemy',
+    'WSGI',
+    'gunicorn',
+    'Redis',
+    'Flask_WFT',
+    'Eventlet / Gevent',
+    'Nginx',
+  ]
+}
 
 export default function StackLayout() {
   const [isStopped, setIsStopped] = useState<boolean>(false)
@@ -64,7 +66,7 @@ export default function StackLayout() {
       <div className={`${styles.skillsBlock} flex w-full`}>
         <div className={`${styles.frontendStack}`}>
           <H2 className='text-white mb-8 mr-52'>Frontend</H2>
-          {frontendStack.map((item: string, index) => (
+          {stack.frontendStack.map((item: string, index) => (
             <Paragraph
               className='text-white'
               key={`${index}_${item}`}>
@@ -74,7 +76,7 @@ export default function StackLayout() {
         </div>
         <div className={`${styles.backendBlock}`}>
           <H2 className='text-white mb-8'>Backend</H2>
-          {backendStack.map((item: string, index) => (
+          {stack.backendStack.map((item: string, index) => (
             <Paragraph
               className='text-white'
               key={`${index}_${item}`}>
