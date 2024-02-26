@@ -1,0 +1,50 @@
+@import '../../styles/consts.scss';
+
+.projectCard {
+  width: 510px;
+  height: 350px;
+  padding: 24px 42px 0;
+  position: relative;
+  cursor: pointer;
+  border-radius: 24px;
+  overflow: hidden;
+  transition: $reg-transition;
+  .gradientBg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 24px !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: -1;
+  }
+  .projectInfo {
+    color: aqua;
+    transition: 0.75s;
+  }
+  .jobTitle {
+    transition: 0.75s;
+  }
+  .projectImage {
+    position: relative;
+    transition: 0.75s;
+    transform: translateY(40%);
+    position: absolute;
+    filter: blur(1px);
+    bottom: 0;
+    border-radius: 24px 24px 0 0;
+  }
+  &:hover {
+    transform: scale(1.01);
+  }
+  &:hover > .projectImage {
+    filter: blur(0);
+    transform: translateY(0);
+  }
+  &:hover > .projectInfo,
+  &:hover > .jobTitle {
+    opacity: 0;
+    filter: blur(4px);
+    transform: translateY(-150px);
+  }
+}
