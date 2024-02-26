@@ -1,0 +1,44 @@
+.Footer {
+  width: 1920px;
+  height: 1024px;
+  .footerWrapper {
+    padding-left: 420px;
+    background-size: 100% 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    padding-top: 214px;
+    background-image: url('../../../public/backgrounds/clearBg.png');
+  }
+  .linksBlock {
+    display: grid;
+    width: min-content;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+
+    .githubCard {
+      width: 510px;
+      height: 350px;
+      border-radius: 24px;
+      border: 2px solid white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      &:hover {
+        svg path {
+          fill: #0f0f0f;
+        }
+      }
+      svg {
+        fill-opacity: 1 !important;
+        transform: scale(6);
+        fill: white;
+
+        path {
+          fill-opacity: 1 !important;
+          fill: white;
+        }
+      }
+    }
+  }
+}
