@@ -1,0 +1,18 @@
+@import '../../styles/consts.scss';
+
+.Token {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 18px;
+  border: 1px solid white;
+  color: #fff;
+  padding: 4px 8px;
+  border-radius: 9000px;
+  transition: all $reg-transition;
+    height: max-content !important;
+  position: relative;
+  svg path {
+    transition: fill $reg-transition;
+    fill: #fff;
+  }
+}
