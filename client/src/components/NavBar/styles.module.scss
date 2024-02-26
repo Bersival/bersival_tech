@@ -1,6 +1,6 @@
 @import '../../styles/consts.scss';
 
-.NavBarWrapper {
+.navBarWrapper {
   width: 100%;
   position: fixed;
   top: 80px;
@@ -8,7 +8,7 @@
   align-items: center;
   z-index: 10000;
   justify-content: center;
-  .NavBar {
+  .navBar {
     border: 2px solid white;
     padding: 6px 0;
     padding-left: 6px;
@@ -29,9 +29,8 @@
         }
       }
       li.active {
-        // background-image: url('../../../public/gradients/buttonBG.png');
-        // background-size: cover;
-        // background-size: 100% 100%;
+        transition: color 1s ease-in;
+        transition-delay: 0.3s;
         color: #0f0f0f;
       }
       :not(.active):hover {
@@ -41,8 +40,6 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
-        // background: rgb(226, 167, 232);
-        // background: linear-gradient(18deg, rgba(226, 167, 232, 1) 22%, rgba(151, 206, 235, 1) 62%);
       }
     }
   }
@@ -60,9 +57,6 @@
   background-size: 100% 100%;
   color: #0f0f0f;
 }
-
-// li:nth-child(1).active ~ .indicator {
-// }
 
 li:nth-child(2).active ~ .indicator {
   width: 95px;

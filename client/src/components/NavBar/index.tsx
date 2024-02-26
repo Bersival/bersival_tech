@@ -1,17 +1,15 @@
-import React, { useState } from 'react'
+import React, {useState} from 'react'
 import styles from './styles.module.scss'
 
-type NavBarProps = {
-  // Prop types goes here
-}
+interface NavBarProps {}
 
 export const NavBar: React.FC<NavBarProps> = props => {
   const navItems = ['About me', 'Stack', 'Projects', 'Links']
   const [activeToken, setActiveToken] = useState<string>('About me')
   return (
-    <div className={styles.NavBarWrapper}>
+    <div className={styles.navBarWrapper}>
       <nav
-        className={styles.NavBar}
+        className={styles.navBar}
         role='navigation'>
         <ul>
           {navItems.map((item, index) => (
