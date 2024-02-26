@@ -34,8 +34,8 @@ export default function AboutLayout() {
             className='mt-60 z-50'
             src={'/images/avatar.png'}
             alt='avatar'
-            width={450}
-            height={450}></Image>
+            width={400}
+            height={400}></Image>
         </div>
         <div className={`${styles.nameHeadlineBlock}`}>
           <H1 className={`${styles.nameHeadline} text-white`}>Boris Ovchinnikov</H1>
