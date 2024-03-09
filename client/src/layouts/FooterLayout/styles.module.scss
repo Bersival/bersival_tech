@@ -10,9 +10,10 @@
     background-image: url('../../../public/backgrounds/clearBg.png');
   }
   .linksBlock {
-    display: grid;
-    width: min-content;
-    grid-template-columns: 1fr 1fr;
+    // display: grid;
+    width: 300px;
+    // grid-template-columns: 1fr 1fr;
+    // grid-auto-columns: 1fr 1fr;
     gap: 24px;
 
     .githubCard {

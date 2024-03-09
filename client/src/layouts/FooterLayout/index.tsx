@@ -12,6 +12,9 @@ import Link from 'next/link'
 import {ReactElement} from 'react'
 import CvIcon from '@/sources/icons/Cv'
 import TelegramIcon from '@/sources/icons/Telegram'
+import WakaTimeIcon from '@/sources/icons/Wakatime'
+import CodewarsIcon from '@/sources/icons/Codewars'
+import LeetcodeIcon from '@/sources/icons/Leetcode'
 
 interface LinkItem {
   name: string
@@ -20,9 +23,12 @@ interface LinkItem {
 }
 
 const links: LinkItem[] = [
-  {name: 'telegram', link: 'https://t.me/bersival', icon: <TelegramIcon />},
-  {name: 'cv', link: '', icon: <CvIcon />},
-  {name: 'github', link: 'https://github.com/bersival', icon: <GithubIcon />},
+  {name: 'CV', link: '', icon: <CvIcon />},
+  {name: 'Telegram', link: 'https://t.me/bersival', icon: <TelegramIcon />},
+  {name: 'GitHub', link: 'https://github.com/bersival', icon: <GithubIcon />},
+  {name: 'CodeWars', link: 'https://www.codewars.com/users/Bersival', icon: <CodewarsIcon />},
+  {name: 'LeetCode', link: 'https://leetcode.com/Bersival', icon: <LeetcodeIcon />},
+  {name: 'WakaTime', link: 'https://wakatime.com/@Bersival', icon: <WakaTimeIcon />},
 ]
 
 export default function FooterLayout() {
@@ -30,7 +36,6 @@ export default function FooterLayout() {
     <footer className={styles.Footer}>
       <div className={`${styles.footerWrapper}`}>
         <H1 className='text-white mb-14'>Links</H1>
-
         <div className={`${styles.linksBlock} grid w-full`}>
           {links.map((link, index) => (
             <Link href={link.link}>
