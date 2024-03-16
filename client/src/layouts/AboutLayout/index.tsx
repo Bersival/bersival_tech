@@ -18,7 +18,9 @@ import MailIcon from '@/sources/icons/Mail'
 
 export default function AboutLayout() {
   return (
-    <section className={`${styles.aboutBlock}`}>
+    <section
+      id='about'
+      className={`${styles.aboutBlock}`}>
       <div className='text-white opacity-50 select-none text-right absolute right-0 top-0 blur-sm'>
         <H2 className='mb-4'>ReactJS</H2>
         <H2 className='mb-4'>NextJS</H2>

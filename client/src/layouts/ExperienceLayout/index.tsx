@@ -57,7 +57,9 @@ const projects: Project[] = [
 
 export default function ExperienceLayout() {
   return (
-    <section className={styles.experienceSection}>
+    <section
+      id='experience'
+      className={styles.experienceSection}>
       <H1 className='text-white mb-14'>Experience</H1>
       <div className={`${styles.projectsBlock} grid w-full`}>
         {projects.map((project, index) => (

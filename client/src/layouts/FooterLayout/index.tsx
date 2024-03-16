@@ -33,12 +33,16 @@ const links: LinkItem[] = [
 
 export default function FooterLayout() {
   return (
-    <footer className={styles.Footer}>
+    <footer
+      id='footer'
+      className={styles.Footer}>
       <div className={`${styles.footerWrapper}`}>
         <H1 className='text-white mb-14'>Links</H1>
         <div className={`${styles.linksBlock} grid w-full`}>
           {links.map((link, index) => (
-            <Link href={link.link}>
+            <Link
+              href={link.link}
+              key={index}>
               <Button key={index}>
                 {link.icon}
                 <span className='ml-2'>{link.name}</span>

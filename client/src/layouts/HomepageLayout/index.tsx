@@ -30,9 +30,7 @@ export default function HomePageLayout() {
             factor={1 / 2}
             sticky={{start: 0, end: 1}}
             speed={2}>
-            {/* <h1>Your content here</h1> */}
             <AboutLayout />
-            {/* More content */}
           </ParallaxLayer>
 
           <ParallaxLayer
@@ -41,20 +39,8 @@ export default function HomePageLayout() {
             speed={2}>
             <StackLayout />
             <ExperienceLayout />
-          <FooterLayout />
+            <FooterLayout />
           </ParallaxLayer>
-
-          <ParallaxLayer
-            offset={2}
-              // sticky={{start: 2, end: 3}}
-            speed={2}>
-
-            </ParallaxLayer>
-          <ParallaxLayer
-            offset={3}
-            speed={2}>
-
-            </ParallaxLayer>
         </Parallax>
       </div>
     </main>

@@ -74,6 +74,7 @@ export default function StackLayout() {
 
   return (
     <section
+      id='stack'
       className={`${styles.stackSection}`}
       onClick={() => setIsStopped(false)}>
       <H1 className={`${styles.stackHeadline} text-white`}>Stack</H1>
