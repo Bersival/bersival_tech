@@ -13,6 +13,8 @@ import StackLayout from '../StackLayout'
 import ExperienceLayout from '../ExperienceLayout'
 import FooterLayout from '../FooterLayout'
 
+import {Parallax, ParallaxLayer, ParallaxLayerProps} from '@react-spring/parallax'
+
 export default function HomePageLayout() {
   const dispatch = useAppDispatch()
 
@@ -20,10 +22,40 @@ export default function HomePageLayout() {
     <main className={`${styles.homePageLayoutWrapper} flex flex-col items-center`}>
       <NavBar />
       <div className={`${styles.homePageLayout} relative h-full w-screen z-20`}>
-        <AboutLayout />
-        <StackLayout />
-        <ExperienceLayout />
-        <FooterLayout />
+        <Parallax
+          pages={4}
+          style={{top: '0', left: '0', width: '100vw'}}>
+          <ParallaxLayer
+            offset={0}
+            factor={1 / 2}
+            sticky={{start: 0, end: 1}}
+            speed={2}>
+            {/* <h1>Your content here</h1> */}
+            <AboutLayout />
+            {/* More content */}
+          </ParallaxLayer>
+
+          <ParallaxLayer
+            offset={1}
+            sticky={{start: 1, end: 2.5 / 2}}
+            speed={2}>
+            <StackLayout />
+            <ExperienceLayout />
+          <FooterLayout />
+          </ParallaxLayer>
+
+          <ParallaxLayer
+            offset={2}
+              // sticky={{start: 2, end: 3}}
+            speed={2}>
+
+            </ParallaxLayer>
+          <ParallaxLayer
+            offset={3}
+            speed={2}>
+
+            </ParallaxLayer>
+        </Parallax>
       </div>
     </main>
   )
