@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   z-index: 10000;
-  justify-content: center; 
+  justify-content: center;
   .navBar {
     border: 2px solid white;
     padding: 6px 0;
@@ -29,11 +29,10 @@
         }
       }
       li.active {
-        transition: color 1s ease-in;
-        transition-delay: 0.3s;
-        color: #0f0f0f;
+        animation: fadeIn 0.5s;
+        animation-fill-mode: forwards;
       }
-      :not(.active):hover {
+      li:not(.active):hover {
         transition: all $reg-transition;
         background-image: url('../../../public/gradients/buttonBG.png');
         background-size: 100% 100%;
@@ -48,7 +47,7 @@
 .indicator {
   position: absolute;
   width: 122px;
-  transition: transform 1s;
+  transition: transform 0.5s;
   height: 55px;
   border-radius: 99999px;
   z-index: -1;
@@ -65,7 +64,7 @@ li:nth-child(2).active ~ .indicator {
 }
 
 li:nth-child(3).active ~ .indicator {
-  width: 122px;
+  width: 150px;
   height: 55px;
   transform: translateX(225px);
 }
@@ -73,5 +72,14 @@ li:nth-child(3).active ~ .indicator {
 li:nth-child(4).active ~ .indicator {
   width: 95px;
   height: 55px;
-  transform: translateX(350px);
+  transform: translateX(375px);
+}
+
+@keyframes fadeIn {
+  0% {
+    color: white;
+  }
+  100% {
+    color: black;
+  }
 }
