@@ -22,6 +22,7 @@
         user-select: none;
         font-size: 20px;
         cursor: pointer;
+        position: relative;
         border-radius: 9000px;
         line-height: 23px;
         &:not(:last-child) {
@@ -47,7 +48,8 @@
 .indicator {
   position: absolute;
   width: 122px;
-  transition: transform 0.5s;
+  transition: width 0.5s;
+  transition: all 0.5s;
   height: 55px;
   border-radius: 99999px;
   z-index: -1;
@@ -56,6 +58,12 @@
   background-size: 100% 100%;
   color: #0f0f0f;
 }
+
+// li:nth-child(1).active ~ .indicator {
+//   width: 95px;
+//   height: 55px;
+//   transform: translateX(127px);
+// }
 
 li:nth-child(2).active ~ .indicator {
   width: 95px;
