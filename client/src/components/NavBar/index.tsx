@@ -1,11 +1,11 @@
-import React, {use, useEffect, useState} from 'react'
+import React, {use, useCallback, useEffect, useMemo, useState} from 'react'
 import styles from './styles.module.scss'
 import {Link} from 'react-scroll'
 import {scroller} from 'react-scroll'
 
 export const NavBar: React.FC = () => {
-  const navItems = ['About me', 'Stack', 'Experience', 'Links'] // titles
-  const navLinks = ['about', 'stack', 'experience', 'footer'] // anchors
+  const navItems = useMemo(() => ['About me', 'Stack', 'Experience', 'Links'], [])
+  const navLinks = useMemo(() => ['about', 'stack', 'experience', 'footer'], [])
 
   const [activeToken, setActiveToken] = useState<string>('About me')
 
@@ -28,7 +28,7 @@ export const NavBar: React.FC = () => {
     }, 530)
   }
 
-  const handleScroll = () => {
+  const handleScroll = useCallback(() => {
     const sections = navLinks
     const currentSection = sections.find(section => {
       const element = document.getElementById(section)
@@ -42,12 +42,12 @@ export const NavBar: React.FC = () => {
       const navItem = navItems[sections.indexOf(currentSection)]
       setActiveToken(navItem)
     }
-  }
+  }, [navLinks, navItems, setActiveToken])
 
   useEffect(() => {
     window.addEventListener('scroll', handleScroll)
     return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+  }, [handleScroll])
 
   return (
     <div className={styles.navBarWrapper}>
@@ -55,8 +55,9 @@ export const NavBar: React.FC = () => {
         className={styles.navBar}
         role='navigation'>
         <ul>
-          {navItems.map(item => (
+          {navItems.map((item, index) => (
             <li
+              key={item + index}
               onClick={() => triggerScrollToElement(navLinks[navItems.indexOf(item)], item)}
               className={styles['nav-item'] + ' ' + (item === activeToken ? styles['active'] : '')}>
               {item}
