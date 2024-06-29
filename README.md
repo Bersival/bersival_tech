@@ -10,11 +10,11 @@ This is a Next.js project bootstrapped with [`create-next-app`](https://github.c
 Main commands:
 
 ```bash
-yarn
-yarn add [package-name]
-yarn lint
-yarn dev
-yarn build
+npm i
+npm i [package-name]
+npm run lint
+npm run dev
+npm run build
 ```
 
 Stack:
@@ -27,4 +27,4 @@ Stack:
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Ubuntu font.
+This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load `Ubuntu` font.
